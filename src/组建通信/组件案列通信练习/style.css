@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+.tab {
+  display: flex;
+}
+.tab-item {
+  flex: 1;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+}
+.tab-item .active {
+  padding: 5px 0;
+  color: red;
+  border-bottom: 2px solid red;
+}
