@@ -23,9 +23,16 @@ import ReactDOM from 'react-dom';
 // import App from './react的css/styled-component/4-styled设置主题'
 // import App from './react的css/classnames'
 
-import App from './antd案例/App'
+// import App from './antd案例/App'
+// import 'antd/dist/antd.less';
 
-import 'antd/dist/antd.less';
+// import App from './todoList/App'
+
+// import App from './router/基本路由'
+// import App from './router/动态路由'
+// import App from './router/动态路由/动态路由传值/App'
+// import App from './router/动态路由/get传值/App'
+import App from './router/动态路由案例/App'
 
 ReactDOM.render(<App/>, document.getElementById('root'));
 

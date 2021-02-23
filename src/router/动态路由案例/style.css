@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#root {
+  background-color: #F7F7F7;
+}
+h2 {
+  text-align: center;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+.menu-container {
+  display: flex;
+  padding: 15px;
+}
+.menu-item {
+  flex: 1;
+  margin-right: 15px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.menu-item:last-child {
+  margin-right: 0;
+}
+.menu-item p {
+  font-size: 12px;
+}
+.content {
+  padding: 5px;
+}
+.imgCover {
+  width: 100%;
+  height: 50px;
+  background-color: green;
+  border-radius: 5px 5px 0 0;
+}

@@ -36,5 +36,9 @@ export default class HYCommentInput extends PureComponent {
 
     const { submitComment } = this.props
     submitComment(commentInfo)
+
+    this.setState({
+      areaValue: ''
+    })
   }
 }
