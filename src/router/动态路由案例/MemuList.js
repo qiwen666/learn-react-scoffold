@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 import './style.css'
 
@@ -8,24 +9,23 @@ export default class MenuList extends PureComponent {
     super(props)
 
     this.state = {
-      menuList: [
-        // { id: 1, title: '娃娃菜炖豆腐', price: 2 },
-        // { id: 2, title: '香煎黄金鱼', price: 22 },
-        // { id: 3, title: '香煎黄金鱼', price: 25 },
-      ]
+      item: {}
     }
   }
+  componentDidMount() {
+    this.getMenuList()
+  }
   render() {
-    console.log(this.props);
+    const { title, list } = this.state.item
     return (
       <div>
-        <h2>{this.props.list.title}</h2>
+        <h2>{title}</h2>
         <ul className="menu-container">
           {
-            this.props.list.list && this.props.list.list.map((item, index) => {
+            list && list.map((item, index) => {
               return (
                 <li key={item._id} className="menu-item">
-                  <Link to={`/menuDetail/${item._id}`}>
+                  <Link to={`/menuDetail/${item._id}` } >
                     <div>
                       <div className="imgCover">
                         <img src={`http://a.itying.com/${item.img_url}`} alt={item.title}/>
@@ -44,4 +44,13 @@ export default class MenuList extends PureComponent {
       </div>
     )
   }
+  getMenuList() {
+    axios.get('http://a.itying.com/api/productlist').then(res => {
+      console.log(res);
+      this.setState({
+        item: res.data.result[0]
+      })
+    })
+  }
+
 }
