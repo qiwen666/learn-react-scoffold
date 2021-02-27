@@ -26,13 +26,18 @@ import ReactDOM from 'react-dom';
 // import App from './antd案例/App'
 // import 'antd/dist/antd.less';
 
-// import App from './todoList/App'
+import App from './todoList/App'
 
 // import App from './router/基本路由'
 // import App from './router/动态路由'
 // import App from './router/动态路由/动态路由传值/App'
 // import App from './router/动态路由/get传值/App'
-import App from './router/动态路由案例/App'
+// import App from './router/动态路由案例/App'
+
+// import App from './className/App'
+
+// import App from './redux/App'
+// import App from './react-redux/App'
 
 ReactDOM.render(<App/>, document.getElementById('root'));
 
