@@ -26,7 +26,7 @@ import ReactDOM from 'react-dom';
 // import App from './antd案例/App'
 // import 'antd/dist/antd.less';
 
-import App from './todoList/App'
+// import App from './todoList/App'
 
 // import App from './router/基本路由'
 // import App from './router/动态路由'
@@ -38,6 +38,12 @@ import App from './todoList/App'
 
 // import App from './redux/App'
 // import App from './react-redux/App'
+// import App from './react-redux/shopping-cart/App'
+// import store from './react-redux/shopping-cart/store'
+// import App from './react-redux/shopping-cart/containers/App'
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+import App from './shpping-cart/container/App'
+// import store from './shpping-cart/store'
+
+ReactDOM.render(<App />, document.getElementById('root'));
 

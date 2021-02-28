@@ -27,17 +27,10 @@ export default class Home extends PureComponent {
       <div>
         Home
         <h2>当前计数：{this.state.counter}</h2>
-        <button onClick={(e) => this.increment()}>+1</button>
-        <button onClick={(e) => this.addNumber(5)}>-1</button>
+        <button onClick={() => store.dispatch(addAction(1))}>+1</button>
+        <button onClick={() => store.dispatch(addAction(5))}>-1</button>
       </div>
     );
   }
 
-  increment() {
-    store.dispatch(addAction(1));
-  }
-
-  addNumber(num) {
-    store.dispatch(addAction(num));
-  }
 }
