@@ -46,7 +46,6 @@ export default class MenuList extends PureComponent {
   }
   getMenuList() {
     axios.get('http://a.itying.com/api/productlist').then(res => {
-      console.log(res);
       this.setState({
         item: res.data.result[0]
       })
